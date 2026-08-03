@@ -68,14 +68,48 @@ public class Main {
 
         //Task №4
         System.out.println("//Task №4");
-    int month = 1;
-    int total = 0;
-while (total>=12_000_000){
+        int month = 0;
+        int total = 0;
+        while (true) {
+            total += 15000;
+            month++;
+            if (month % 6 == 0) {
+                total += total * 7 / 100;
+            }
+            System.out.println("Месяц " + month + ". Сумма накоплений: " + total);
+            if (total >= 12_000_000) {
+                break;
+            }
 
-}
+
+        }
+        //Task №5
+        System.out.println("//Task №5");
+        int charge = 20;
+        int minute = 0;
+        int overheats = 0;
+        while (charge < 100 && overheats <= 3) {
+            minute++;
+            if (minute % 10 == 0) {
+                overheats++;
+                System.out.println("Перегрев! Зарядка приостановлена.");
+
+                if (overheats > 3) {
+                    System.out.println("Зарядка досрочно завершена.");
+                    break;
+                }
+                minute += 2;
+                continue;
+            }
+            charge += 2;
+        }
+        System.out.println("Время зарядки составило " + minute + " минут.");
+
+
+    }
 }
 
 
-}
+
 
 
