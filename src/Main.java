@@ -6,10 +6,8 @@ public class Main {
         // Task №1
         System.out.println("//Task №1");
         int firstFriday = 1;
-        for (; firstFriday <= 31; firstFriday++) {
-            if (firstFriday % 7 == 0) {
-                System.out.println("Сегодня пятница, " + firstFriday + "-е число. Необходимо подготовить отчет.");
-            }
+        for (; firstFriday <= 31; firstFriday += 7) {
+            System.out.println("Сегодня пятница, " + firstFriday + "-е число. Необходимо подготовить отчет.");
         }
 
         //Task №2
@@ -24,11 +22,9 @@ public class Main {
 
         //Task №2.1
         System.out.println("//Task №2.1");
-        int distance1 = 0;
         int fulldistance1 = 42195;
         int steps = 0;
-        for (int i = 0; i < 84; i++) {
-            distance1 = distance1 + 500;
+        for (int distance1 = 0; distance1 < +fulldistance1; distance1 += 500) {
             steps = steps + 1;
             System.out.println("Держитесь! Осталось " + (fulldistance1 - distance1) + " метров");
         }
@@ -89,13 +85,13 @@ public class Main {
         int charge = 20;
         int minute = 0;
         int overheats = 0;
-        while (charge < 100 && overheats <= 3) {
+        while (charge < 100) {
             minute++;
             if (minute % 10 == 0) {
                 overheats++;
                 System.out.println("Перегрев! Зарядка приостановлена.");
 
-                if (overheats > 3) {
+                if (overheats >= 3) {
                     System.out.println("Зарядка досрочно завершена.");
                     break;
                 }
