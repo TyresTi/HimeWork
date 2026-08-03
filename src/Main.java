@@ -32,9 +32,11 @@ public class Main {
             steps = steps + 1;
             System.out.println("Держитесь! Осталось " + (fulldistance1 - distance1) + " метров");
         }
+
         //Task №2.2
         System.out.println("//Task №2.2");
         System.out.println("Программа работает корректно и выводит " + steps + " сообщения");
+
         //Task №2.3
         System.out.println("//Task №2.3");
         System.out.println("Оба варианта проверены на читаемость и корректность кода");
@@ -80,9 +82,8 @@ public class Main {
             if (total >= 12_000_000) {
                 break;
             }
-
-
         }
+
         //Task №5
         System.out.println("//Task №5");
         int charge = 20;
@@ -104,8 +105,6 @@ public class Main {
             charge += 2;
         }
         System.out.println("Время зарядки составило " + minute + " минут.");
-
-
     }
 }
 
