@@ -79,6 +79,7 @@ public class Main {
         for (int i = 0; i < weight.length; i++) {
             weight[i]++;
             System.out.println(weight[i]);
+
         }
     }
 }
