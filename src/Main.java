@@ -6,24 +6,74 @@ public class Main {
     public static void main(String[] args) {
 
         // Task №1
+        System.out.println("Task №1");
         int[] weight = new int[3];
-        weight[0] = 3;
-        weight[1] = 9;
-        weight[2] = 67;
+        weight[0] = 1;
+        weight[1] = 2;
+        weight[2] = 3;
+        System.out.println(Arrays.toString(weight));
         // Task №1.1
+        System.out.println("Task №1.1");
         float[] weight1 = {1.57F, 7.654F, 9.986F};
+        System.out.println(Arrays.toString(weight1));
         // Task №1.2
-        String[] weight2 = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь" };
+        System.out.println("Task №1.2");
+        String[] weight2 = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь"};
+        System.out.println(Arrays.toString(weight2));
         // Task №2
         System.out.println("Task №2");
-        System.out.println(weight[0] + "," + weight[1] + "," + weight[2]);
-        System.out.println(weight1[0] + "," + weight1[1] + "," + weight1[2]);
-        System.out.println(weight2[0] + "," + weight2[1] + "," + weight2[2] + "," + weight2[3] + "," + weight2[4] + "," + weight2[5]);
+        for (int i = 0; i < weight.length; i++) {
+            if (i == weight.length - 1) {
+                System.out.print(weight[i]);
+            } else {
+                System.out.print(weight[i] + ", ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < weight1.length; i++) {
+            if (i == weight1.length - 1) {
+                System.out.print(weight1[i]);
+            } else {
+                System.out.print(weight1[i] + ", ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < weight2.length; i++) {
+            if (i == weight2.length - 1) {
+                System.out.print(weight2[i]);
+            } else {
+                System.out.print(weight2[i] + ", ");
+            }
+        }
+        System.out.println();
+
         // Task №3
         System.out.println("Task №3");
-        System.out.println(weight[2] + "," + weight[1] + "," + weight[0]);
-        System.out.println(weight1[2] + "," + weight1[1] + "," + weight1[0]);
-        System.out.println(weight2[5] + "," + weight2[4] + "," + weight2[3] + "," + weight2[2] + "," + weight2[1] + "," + weight2[0]);
+        for (int i = weight.length - 1; i >= 0; i--) {
+            if (i == 0) {
+                System.out.print(weight[i]);
+            } else {
+                System.out.print(weight[i] + ", ");
+            }
+        }
+        System.out.println();
+        for (int i = weight1.length - 1; i >= 0; i--) {
+            if (i == 0) {
+                System.out.print(weight1[i]);
+            } else {
+                System.out.print(weight1[i] + ", ");
+            }
+        }
+        System.out.println();
+        for (int i = weight2.length - 1; i >= 0; i--) {
+            if (i == 0) {
+                System.out.print(weight2[i]);
+            } else {
+                System.out.print(weight2[i] + ", ");
+            }
+        }
+        System.out.println();
+
         // Task №4
         System.out.println("Task №4");
         for (int i = 0; i < weight.length; i++) {
