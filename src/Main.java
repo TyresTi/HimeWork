@@ -42,8 +42,10 @@ public class Main {
 
         int[] inputArray2 = {30000, 45000, 50000, 60000, 75000};
         double[] outputArray2 = new double[5];
-        for (int i = 0; i < inputArray2.length; i++) {
-            outputArray2[i] = inputArray2[i] * 0.13;
+        int index2 = 0;
+        for (int pyment : inputArray2) {
+            outputArray2[index2] = pyment * 0.13;
+            index2++;
         }
         System.out.println("inputArray2:");
         for (int payment : inputArray2) {
@@ -60,8 +62,10 @@ public class Main {
         System.out.println("Task№3");
         int[] inputArray3 = {3000, 5500, 7000, 4500, 9000};
         boolean[] outputArray3 = new boolean[5];
-        for (int i = 0; i < inputArray3.length; i++) {
-            outputArray3[i] = inputArray3[i] > 5000;
+        int index3 = 0;
+        for (int bonus : inputArray3) {
+            outputArray3[index3] = bonus > 5000;
+            index3++;
         }
         System.out.println("inputArray3:");
         for (int bonus : inputArray3) {
@@ -77,9 +81,13 @@ public class Main {
         //task№4
         System.out.println("Task№4");
         int[] inputArray4 = {40000, 20000, 5000, 1000, -1000};
-        boolean[] outputArray4 = new boolean[5];
-        for (int i = 0; i < inputArray4.length; i++) {
-            outputArray4[i] = inputArray4[i] > 0;
+        boolean[] outputArray4 = new boolean[1];
+        outputArray4[0] = true;
+        for (int value : inputArray4) {
+            if (value < 0) {
+                outputArray4[0] = false;
+                break;
+            }
         }
         System.out.println("inputArray4");
         for (int flag : inputArray4) {
@@ -95,10 +103,10 @@ public class Main {
         //task№5
         System.out.println("Task№5");
         int[] inputArray5 = {50000, -12000, 30000, 0, 45000};
-        int outputArray5 = 0;
+        int [] outputArray5 = new  int[1];
         for (int profit : inputArray5) {
             if (profit > 0) {
-                outputArray5++;
+                outputArray5[0]++;
             }
         }
         System.out.println("inputArray5:");
@@ -107,7 +115,7 @@ public class Main {
         }
         System.out.println();
         System.out.println("outputArray5:");
-        System.out.println(outputArray5);
+        System.out.println(outputArray5[0]);
     }
 }
 
