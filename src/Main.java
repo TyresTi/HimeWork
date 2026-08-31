@@ -4,84 +4,122 @@ import java.util.Arrays;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
-        // Task №1
-        System.out.println("Task №1");
-        int[] weight = new int[3];
-        weight[0] = 1;
-        weight[1] = 2;
-        weight[2] = 3;
-        System.out.println(Arrays.toString(weight));
-        // Task №1.1
-        System.out.println("Task №1.1");
-        float[] weight1 = {1.57F, 7.654F, 9.986F};
-        System.out.println(Arrays.toString(weight1));
-        // Task №1.2
-        System.out.println("Task №1.2");
-        String[] weight2 = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь"};
-        System.out.println(Arrays.toString(weight2));
-        // Task №2
-        System.out.println("Task №2");
-        for (int i = 0; i < weight.length; i++) {
-            if (i == weight.length - 1) {
-                System.out.print(weight[i]);
-            } else {
-                System.out.print(weight[i] + ", ");
+        //task№1
+        System.out.println("Task№1");
+        int[] inputArray1 = {12000, 15000, 9000, 18000, 11000};
+        double[] outputArray1 = new double[4];
+        int sum = 0;
+        for (int pyment : inputArray1) {
+            sum += pyment;
+        }
+        int max = inputArray1[0];
+        int min = inputArray1[0];
+        for (int pyment : inputArray1) {
+            if (pyment > max) {
+                max = pyment;
+            }
+            if (pyment < min) {
+                min = pyment;
             }
         }
-        System.out.println();
-        for (int i = 0; i < weight1.length; i++) {
-            if (i == weight1.length - 1) {
-                System.out.print(weight1[i]);
-            } else {
-                System.out.print(weight1[i] + ", ");
-            }
+        outputArray1[0] = sum;
+        outputArray1[1] = max;
+        outputArray1[2] = min;
+        outputArray1[3] = (double) sum / inputArray1.length;
+        System.out.println("inputArray1:");
+        for (int value : inputArray1) {
+            System.out.print(value + " ");
         }
         System.out.println();
-        for (int i = 0; i < weight2.length; i++) {
-            if (i == weight2.length - 1) {
-                System.out.print(weight2[i]);
-            } else {
-                System.out.print(weight2[i] + ", ");
-            }
+        System.out.println("outputArray1:");
+        for (double value : outputArray1) {
+            System.out.print(value + " ");
         }
         System.out.println();
 
-        // Task №3
-        System.out.println("Task №3");
-        for (int i = weight.length - 1; i >= 0; i--) {
-            if (i == 0) {
-                System.out.print(weight[i]);
-            } else {
-                System.out.print(weight[i] + ", ");
-            }
+        //task№2
+        System.out.println("Task№2");
+
+        int[] inputArray2 = {30000, 45000, 50000, 60000, 75000};
+        double[] outputArray2 = new double[5];
+        int index2 = 0;
+        for (int pyment : inputArray2) {
+            outputArray2[index2] = pyment * 0.13;
+            index2++;
+        }
+        System.out.println("inputArray2:");
+        for (int payment : inputArray2) {
+            System.out.print(payment + " ");
         }
         System.out.println();
-        for (int i = weight1.length - 1; i >= 0; i--) {
-            if (i == 0) {
-                System.out.print(weight1[i]);
-            } else {
-                System.out.print(weight1[i] + ", ");
-            }
-        }
-        System.out.println();
-        for (int i = weight2.length - 1; i >= 0; i--) {
-            if (i == 0) {
-                System.out.print(weight2[i]);
-            } else {
-                System.out.print(weight2[i] + ", ");
-            }
+        System.out.println("outputArray2:");
+        for (double tax : outputArray2) {
+            System.out.print(tax + " ");
         }
         System.out.println();
 
-        // Task №4
-        System.out.println("Task №4");
-        for (int i = 0; i < weight.length; i++) {
-            weight[i]++;
-            System.out.println(weight[i]);
+        //task№3
+        System.out.println("Task№3");
+        int[] inputArray3 = {3000, 5500, 7000, 4500, 9000};
+        boolean[] outputArray3 = new boolean[5];
+        int index3 = 0;
+        for (int bonus : inputArray3) {
+            outputArray3[index3] = bonus > 5000;
+            index3++;
         }
+        System.out.println("inputArray3:");
+        for (int bonus : inputArray3) {
+            System.out.print(bonus + " ");
+        }
+        System.out.println();
+        System.out.println("outputArray3:");
+        for (boolean flag : outputArray3) {
+            System.out.print(flag + " ");
+        }
+        System.out.println();
+
+        //task№4
+        System.out.println("Task№4");
+        int[] inputArray4 = {40000, 20000, 5000, 1000, -1000};
+        boolean[] outputArray4 = new boolean[1];
+        outputArray4[0] = true;
+        for (int value : inputArray4) {
+            if (value < 0) {
+                outputArray4[0] = false;
+                break;
+            }
+        }
+        System.out.println("inputArray4");
+        for (int flag : inputArray4) {
+            System.out.print(flag + " ");
+        }
+        System.out.println();
+        System.out.println("outputArray4");
+        for (boolean flag : outputArray4) {
+            System.out.print(flag + " ");
+        }
+        System.out.println();
+
+        //task№5
+        System.out.println("Task№5");
+        int[] inputArray5 = {50000, -12000, 30000, 0, 45000};
+        int [] outputArray5 = new  int[1];
+        for (int profit : inputArray5) {
+            if (profit > 0) {
+                outputArray5[0]++;
+            }
+        }
+        System.out.println("inputArray5:");
+        for (int profit : inputArray5) {
+            System.out.print(profit + " ");
+        }
+        System.out.println();
+        System.out.println("outputArray5:");
+        System.out.println(outputArray5[0]);
     }
 }
+
+
 
 
 
